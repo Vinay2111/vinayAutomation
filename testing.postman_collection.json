@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "c99a80e8-6eeb-4369-9fe5-02e240e94ede",
+		"name": "testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15161291",
+		"_collection_link": "https://vinay-352393.postman.co/workspace/vinay-352393-Workspace~1d100724-91ed-4399-8609-917c6b7bda9f/collection/15161291-c99a80e8-6eeb-4369-9fe5-02e240e94ede?action=share&source=collection_link&creator=15161291"
+	},
+	"item": [
+		{
+			"name": "Vinay's",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"verify latitude is 51.51 and the longitude is -0.13\", () => {",
+							"  const responseJson = pm.response.json();",
+							"  pm.expect(responseJson.coord.lat).to.eql(51.51);",
+							"  pm.expect(responseJson.coord.lon).to.eql(-0.13);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"verify content-Type\",function (){",
+							"    pm.response.to.have.header(\"Content-Type\")",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6 907d289e10d714a6e88b30761fae22. \n\n",
+					"protocol": "https",
+					"host": [
+						"samples",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "London,uk"
+						},
+						{
+							"key": "appid",
+							"value": "b6 907d289e10d714a6e88b30761fae22. \n\n"
+						}
+					]
+				},
+				"description": "Certa assessment"
+			},
+			"response": []
+		}
+	]
+}
