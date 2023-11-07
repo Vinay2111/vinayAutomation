@@ -1,0 +1,1 @@
+'''same use the co-ordinates to left and right '''
