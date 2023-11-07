@@ -29,6 +29,7 @@ for option in options:
 time.sleep(5)
 '''to stop the server'''
 # appium_service.stop()
+time.sleep()
 
 
 
