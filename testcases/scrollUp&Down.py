@@ -35,6 +35,7 @@ driver.implicitly_wait(200)
 friends_bottom_btn=driver.find_element(AppiumBy.ID,'com.eezy.ai.dev:id/friendsFragment').click()
 driver.implicitly_wait(15)
 '''will we using UIselector and UIscrollable class'''
+driver.get_window_size()
 
 
 ScrollUtil.scrollToTextByUiAutomator("Chiggers",driver)

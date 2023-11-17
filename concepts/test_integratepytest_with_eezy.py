@@ -13,7 +13,7 @@ def get_data():
         ["test@test.test","qwerty123"]
     ]'''
     workbook=openpyxl.load_workbook("..//excel//testdata.xlsx")
-    sheet=["login"]
+    sheet=workbook["login"]
     totalrows=sheet.max_row
     totalcols=sheet.max_colomn
     mainList=[]
